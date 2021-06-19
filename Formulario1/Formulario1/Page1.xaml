@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Formulario1.Page1">
+    
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout>
+                <Frame BackgroundColor="#2196F3" Padding="10" CornerRadius="0">
+                    <Label Text="Actualizar Datos" HorizontalTextAlignment="Center" TextColor="White" FontSize="30"
+                   />
+                </Frame>
+                <Entry x:Name="txtId" Text="{Binding Id}" IsVisible="False"/>
+
+                <Label Text="Nombre" FontSize="Title" Padding="10,10,0,0"/>
+                <Entry x:Name="txtNombre" Placeholder="Ingrese su nombre"
+                    BackgroundColor="WhiteSmoke"
+                    Text="{Binding Nombre}"
+                    ClearButtonVisibility="WhileEditing"
+                    ReturnType="Done"
+                    Margin="15,0,10,0"/>
+
+                <Label Text="Apellido" FontSize="Title" Padding="10,10,0,0"/>
+                <Entry x:Name="txtApellido" Placeholder="Ingrese su apellido"
+                   BackgroundColor="WhiteSmoke"
+                   ClearButtonVisibility="WhileEditing"
+                   ReturnType="Done"
+                   Text="{Binding Apellido}"
+                   Margin="15,0,10,0"/>
+
+                <Label Text="Edad" FontSize="Title" Padding="10,10,0,0"/>
+                <Entry x:Name="txtEdad" Keyboard="Numeric" Placeholder="Ingrese su edad"
+                   BackgroundColor="WhiteSmoke"
+                   ClearButtonVisibility="WhileEditing"
+                   ReturnType="Done"
+                   Margin="15,0,10,0"/>
+
+                <Label Text="Apellido" FontSize="Title" Padding="10,10,0,0"/>
+                <Entry x:Name="txtCorreo" Keyboard="Email" Placeholder="Ingrese su correo"
+                    BackgroundColor="WhiteSmoke"
+                    Text="{Binding Correo}"
+                    ClearButtonVisibility="WhileEditing"
+                    ReturnType="Done"   
+                    Margin="15,0,10,0"/>
+                <Label Text="Fecha de nacimiento" FontSize="Title" Padding="10,10,0,0"/>
+                <DatePicker x:Name="dpkFecha"
+                Format="D"
+                Margin="15,0,10,0"/>
+
+                <Button Text="Salvar" Margin="25,0,20,10" x:Name="btnEnviar" 
+                    CornerRadius="5"
+                    Clicked="btnEnviar_Clicked"
+                    TextColor="White"
+                    Background="#1A5276"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

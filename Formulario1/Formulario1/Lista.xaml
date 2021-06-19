@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Formulario1.Lista"
+             Title="Lista de personas">
+ 
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="ListaPersonas"
+                         ItemSelected="ListaPersonas_ItemSelected"
+                         ItemsSource="{Binding Persona}"
+                         BackgroundColor="#EBF5FB"
+                         SelectionMode="Single">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell >
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Nombre}"/>
+                                <Label Text="{Binding Apellido}" />
+                                <Label Text="{Binding FechaNacimiento}" HorizontalOptions="EndAndExpand"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout  Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Button x:Name="btnActualizar"
+                        Text="Actualizar"
+                        Clicked="btnActualizar_Clicked"/>
+                
+                <Button x:Name="btnBorrar"
+                        Text="Borrar"
+                        Clicked="btnBorrar_Clicked_1"/>
+  
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
